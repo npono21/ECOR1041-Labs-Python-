@@ -1,0 +1,127 @@
+﻿ECOR 1041 Lab 2 Solution Template 
+
+Author and Student Number: Nicholai Ponomarev #101182048
+
+This file is to be used in conjunction with the detailed lab description for Lab 2.
+Use this file to enter your answers to the series of exercises you will complete.
+
+=========================================================================================
+
+Exploring Variables
+
+The exercises must be done in Python Tutor (pythontutor.com).
+Python Tutor is a great tool for VISUALIZING the execution of code and to understand
+the use of memory by a computer program.  Use the default SETTINGS:
+  - Hide Exited Frames
+  - Inline Primitives and try to nest objects
+  - Draw Pointers as Arrows
+
+Note: Python Tutor is a tool for LEARNING.  Wing 101 is a tool for writing real programs.
+They are both great, but have different purposes and strengths.
+
+============
+
+Exercise 1:  To convert a temperature measured on the Celsius scale to the 
+equivalent Fahrenheit temperature, we multiply the Celsius temperature by 9/5, then add 32. 
+For example, 20.0 degrees Celsius is equivalent to 68.0 degrees Fahrenheit.
+
+In Python Tutor's editor window:
+1. Type one assignment statement that creates a new variable named degrees_c and binds it to 20.0. 
+2. Type one assignment statement that converts the temperature bound to degrees_c to the 
+equivalent temperature in degrees Fahrenheit. This temperature should be bound to a 
+new variable named degrees_f.
+
+Click the Visualize Execution button. Execute the code, one statement at a time. 
+Observe the memory diagram as the code is executed, step-by-step. Verify that your code
+produces a result of 68.0 degrees Farenheit.
+
+When does variable degrees_c appear in the diagram?  
+The variable degrees_c appears in the second step of the diagram.
+
+What is the name of the frame containing degrees_c?  
+The name of the frame that contains degrees_c is called Global frame.
+
+When does variable degrees_f appear in the diagram?
+The variable degrees_f appears in the third step of the diagram.
+===========
+
+Exercise 2: In some countries, a vehicle's fuel efficiency is measured in miles per gallon. 
+In other countries, the efficiency is measured in litres per 100 km. 
+For example, 32 miles per Imperial gallon is equivalent to approximately 8.83 litres per 100 km.
+
+You're going to write Python statements that convert miles per gallon to litres per 100 km. 
+One Imperial gallon is equal to approximately 4.54609 litres. 
+One mile is equal to approximately 1.60934 km. 
+
+In Python Tutor's editor window:
+1. Type one assignment statement that creates a new variable named mpg and 
+binds it to the value 32 (which represents 32 miles per gallon).
+2. Type two assignment statements that create new constants named LITRES_PER_GALLON and 
+KMS_PER_MILE and binds them to the values 4.54609 and 1.60934, respectively. 
+(Note that the names of constant values in Python are, by convention, written in uppercase.)
+3. Type one assignment statement that converts the mileage bound to mpg to the equivalent fuel 
+consumption, measured in litres per 100 km. This value should be bound to a variable named 
+fuel_consumption.
+
+Click the Visualize Execution button. Execute the code, one statement at a time. 
+Observe the memory diagram as the code is executed, step-by-step. Verify that your code
+produces a result of 8.83 litres per 100 km.
+
+When do the variables appear in the diagram?
+The variable mpg appears in step 2 of the diagram. The variable LITRES_PER_GALLON appears in step 3 and 
+the variable KMS_PER_MILE appears in step 4 of the diagram.
+
+What are the types and values of the objects?
+mpg = 32 is an integer value.
+LITRES_PER_GALLON is a float value.
+KMS_PER_MILE is a float value.
+fuel_consumption is a float value.
+===========
+
+Exercise 3: Consider these assignment statements:
+a = 9			# 1
+b = 4			# 2
+c = a * b		# 3
+d = b			# 4
+a = 2			# 5
+b = 3			# 6
+
+First, test your visualization skills by executing the given statements in your head,
+without using the Python shell or PyTutor to assist you.
+
+- Predict the value that will be bound to c AFTER Line 4 is executed: 
+I predicted a value of 36 to be binded to the variable c after line is executed.
+
+- Predict the value that will be bound to d AFTER Line 6 is executed: 
+I predicted a value of 4 to be binded to the variable d after line 6 is executed.
+
+Confirm your answers by entering these statements in Python tutor and executing
+the code one statement at a time.
+
+Concluding Question: This set of statements is an experiment. What question is the
+experiment trying to answer? (i.e. What is proven by this exercise?)
+This expeirment is trying to prove that a value of a variable is only set when a value is binded to them directly.
+For example, in this experiment, the step #3 was c = a*b, this binded the value of 36 to c, but in step 4, it was d = b,
+this step did not change the value of c, in fact, c stayed binded to 36 because no new number was binded to c. That is also
+the reason why d stayed binded to 4, because even tho the value that b was binded to changed in line 6, which was different than 
+original value of b, there was no new number binded to d, therefore, d stayed binded to 4.
+
+===========
+Exercise 4: Explore augmented operators. 
+
+In Python Tutor's editor window, enter the following and execute one statement at a time.
+
+x = 4
+x *= x - x
+
+Concluding Question: Write a short step-by-step explanation of how Python evaluates the
+second statment. 
+In step 1 of 2, nothing happens. In step 2 of 2, the program bind the value of 4 to the variable x. Once the program executes, 
+completely, x is binded to a different number, this time to 0. It is bound to 0 because of how the program executes the second 
+line of code. The piece of code "*=" is an augmented assignment, meaning instead of writing x = x*something, you can write x *= something.
+In this case, the second line is interpreted as x*0 because it is x *= x-x, and x-x is equal to the value of 0, therefore, the line
+actually does x*0 which comes out to 0. This is whe the variable x is binded to the value of 0 after the second line of code is
+executed.
+
+
+Last edited: November 6th, 2020

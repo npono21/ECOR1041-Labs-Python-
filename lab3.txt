@@ -1,0 +1,128 @@
+ECOR 1041 Lab 3 Solution Template
+
+Author and Student Number: Nicholai Ponomarev (#101182048)
+
+This file is to be used in conjunction with the detailed lab description for Lab 3.
+Use this file to enter your answers to the series of exercises you will complete.
+
+==========
+Exercise 1  (.../25)
+
+What is the name of the frame containing variable "area_of_disk"?
+The name of the frame containing the variable "area_of_disk" is called the Global frame.
+
+What does variable "area_of_disk" refer to?
+The variable "area_of_disk" refers to define function corresponding to the era of a circle with only one parameter.
+
+What is the name of the frame containing parameter "radius"?
+The name of the frame containing the parameter "radius" is called area_of_disk.
+
+When does the frame containing parameter radius appear in the memory diagram?
+It appears in step 4.
+
+What is the type and value of the variable "radius"? Where did that value come from?
+The value radius is a type float and it's binded value is 5.0. The value came from line 4
+of the code where the programmer states "area = area_of_disk(5.0)", which when taken in reference
+with line 2, which is "def area_of_disk(radius)" can be clearly stated as being the radius. The value of 5.0 is passed when
+the argument is executed.
+
+How does PyTutor depict the value the function will return?
+PyTutor depicts the value that the function will return as a literal float, with a returned
+value of 78.5398.
+
+When does the frame containing "radius" disappear?
+I disappears in step 6, when the program is done running.
+
+What is the name of the frame containing the variable "area"? 
+The name of the frame containing the variable "area" is called Global frame.
+
+When does "area" appear in the frame?
+It appears in step 6, when the program is done running.
+
+What is the type and value of "area"? Where did that value come from?
+The value of area is 78.5398 and it's type of a literal float. The value came from the mathematical 
+computation of the binded value of "area_of_disk" being multipled by the binded value of the radius which is
+5.0. The variable which is called "area" is assigned 78.5398 because the function "area_of_disk" had returned that value 
+when the radius of 5.0 was passed as an argument in the program.
+
+==========
+Exercise 2 (.../10) 
+
+What value does "area_of_disk" return each time it is called?
+The value "area_of_disk" returns a value of 78.5398 each time it is called.
+
+==========
+Exercise 3 (.../25)
+
+What is the name of the frame containing parameters "inner" and "outer"?
+The name of the frame containing the parameters "inner" and "outer" is called area_of_ring.
+
+When does the frame appear in the memory diagram?
+It appears in step 5.
+
+What are the types and values of the variables "inner" and "outer"? 
+The variables "inner" and "outer" are type floats with associated values of 5.0 and 10.0 respectively.
+
+What caused those values to be bound to "inner" and "outer"?
+The second line caused these value to be bound to "inner" and "outer". This line defined the variable
+"area_of_ring" with paramaters "outer" and "inner" and then these paramters were later set in line 6, when 
+the area was computed and the outer value was 10.0 and the inner value was 5.0 These values were passed as arguments 
+of the function "area_of_ring" in line 6.
+
+What is the name of the frame containing parameter "radius"? 
+The frame containing the paramter "radius" is the area_of_disk frame.
+
+When does that frame appear in the memory diagram? How many times does it appear?
+The frame appears in step 7. The frame appears a total of six times.
+
+Each time the frame containing "radius" appears, what is the type and value bound to "radius"? 
+The type and value bonded to radius is type float with an associated value of 10.0.
+
+What caused that value to be bound to "radius"?
+The value of 5.0 was bound to "radius" because it was first passed as an argument for the value of the
+"inner" variable for he function "area_of_disk" which then was passed as the argument for "radius".
+
+When does the frame containing "radius" disappear?
+The frame containing "radius" disappears in step 13.
+
+When does the frame containing "inner" and "outer" disappear?
+The frame containg "inner" and "outer" disappears in after step 13 when the program is done running.
+
+What is the name of the frame containing the variable "area"? 
+The name of the frame containg the varibale "area" is called the Global frame.
+
+When does "area" appear in the frame?
+"area" appears in the frame after step 13 when the program is done running.
+
+What is the type and value of the variable "area"?
+The type and the value binded to the variable "area" is a type float, with a value of 235.6194.
+
+What caused that value to be bound to "area"?
+Line six, which says " area = area_of_ring(10.0, 5.0) caused the value to bind to "area". 
+
+==========
+Exercise 4 (.../20)
+
+What is the type of the object returned by the function when there is
+no return statement?
+The object returned by the function when there is no return statement is a NoneType object.
+
+What is the value of the object returned by the function when there is
+no return statement?
+It has an associated value of none or null. 
+==========
+Exercise 5 (.../20)
+
+When "cube" is called, but before Python executes x = x ** 3, what value is
+bound to parameter "x"? What value is bound to variable "a"?
+A value of 2 is bound to both the variable x and the variable a.
+
+After Python executes x = x ** 3, but before the function returns, what value
+is bound to parameter "x"? What value is bound to variable "a"?
+The value of 8 is bound to variable x while variable a remains bound to a value of 2.
+
+In Python code, does assigning a value to a function's parameter change the 
+corresponding function argument?
+In Python code, assigning a value to a function's parameters does not change the corresponding function argument.
+==========
+Last edited: November 12th, 2020
